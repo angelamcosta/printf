@@ -10,8 +10,7 @@ HEADER = ft_printf.h -L./libft -lft
 
 RM	=		rm -f
 
-SRC	=		ft_itoa.c ft_printf.c ft_putchar_fd.c/
-ft_putnbr_fd.c ft_putstr_fd.c
+SRC	=		ft_printf.c
 
 OBJ	=		$(SRC:.c=.o)
 
