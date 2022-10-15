@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 12:34:51 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/14 19:42:13 by anlima           ###   ########.fr       */
+/*   Created: 2022/10/14 19:28:55 by anlima            #+#    #+#             */
+/*   Updated: 2022/10/15 10:15:24 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
-# include <unistd.h>
-# include <stdio.h>
-# include <stdarg.h>
+#include "ft_printf.h"
 
-int		ft_printf(const char *s, ...);
-
-#endif
+void	ft_putnbr_base(int nbr, char *base, int i)
+{
+	if (nbr < 0)
+	{
+		write(1, "-", 1);
+		nbr = -nbr;
+	}
+	if (nbr / i > 0)
+		ft_putnbr_base(nbr / i, base, i);
+	ft_putchar_fd(base[nbr % i], 1);
+}
