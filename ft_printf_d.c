@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 12:34:51 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/15 16:09:39 by anlima           ###   ########.fr       */
+/*   Created: 2022/10/15 15:50:41 by anlima            #+#    #+#             */
+/*   Updated: 2022/10/15 16:09:22 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdarg.h>
-# include "libft/libft.h"
+#include "ft_printf.h"
 
-int		ft_printf(const char *s, ...);
-void	ft_putnbr_base(int nbr, char *base, int i);
-int		ft_printf_s(char *s);
-int		ft_printf_d(int i, char *base, int b);
+int	ft_printf_d(int i, char *base, int b)
+{
+	char	*s;
+	int		len;
 
-#endif
+	s = ft_itoa(i);
+	len = ft_strlen(s);
+	free(s);
+	ft_putnbr_base(i, base, b);
+	return (len);
+}

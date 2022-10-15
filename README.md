@@ -23,15 +23,15 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 <details open>
 <summary> Printf conversions </summary>
 
-- c
-- s
-- p
-- d
-- i
-- u
-- x
-- X
-- %
+- :ballot_box_with_check: c
+- :ballot_box_with_check: s
+- :white_large_square: p
+- :ballot_box_with_check: d
+- :ballot_box_with_check: i
+- :white_large_square: u
+- :white_large_square: x
+- :white_large_square: X
+- :ballot_box_with_check: %
 
 </details>
 
@@ -48,5 +48,5 @@ with all conversions
 
 ## Tasks
 
-- [ ] Printf (ongoing)
-- [ ] Bonus Part (ongoing)
+- :white_large_square: Printf (ongoing)
+- :white_large_square: Bonus Part (ongoing)
