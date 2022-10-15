@@ -25,12 +25,12 @@ The subject of the project can be found in [this link](https://raw.githubusercon
 
 - :ballot_box_with_check: c
 - :ballot_box_with_check: s
-- :white_large_square: p
+- :ballot_box_with_check: p
 - :ballot_box_with_check: d
 - :ballot_box_with_check: i
-- :white_large_square: u
-- :white_large_square: x
-- :white_large_square: X
+- :ballot_box_with_check: u
+- :ballot_box_with_check: x
+- :ballot_box_with_check: X
 - :ballot_box_with_check: %
 
 </details>
@@ -48,5 +48,5 @@ with all conversions
 
 ## Tasks
 
-- :white_large_square: Printf (ongoing)
+- :ballot_box_with_check: Printf
 - :white_large_square: Bonus Part (ongoing)

@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:38:52 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/15 16:09:57 by anlima           ###   ########.fr       */
+/*   Updated: 2022/10/15 21:53:48 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ static	int	ft_call_print(char s, va_list arg)
 	else if (s == '%')
 		ft_putchar_fd('%', 1);
 	else if (s == 'x')
-		ft_putnbr_base(va_arg(arg, unsigned int), "0123456789abcdef", 16);
+		i = ft_printf_x(va_arg(arg, unsigned int), "0123456789abcdef", 16);
 	else if (s == 'X')
-		ft_putnbr_base(va_arg(arg, unsigned int), "0123456789ABCDEF", 16);
+		i = ft_printf_x(va_arg(arg, unsigned int), "0123456789ABCDEF", 16);
 	else if (s == 'u')
-		ft_putnbr_fd(va_arg(arg, unsigned int), 1);
+		i = ft_printf_u(va_arg(arg, unsigned int), "0123456789", 10);
 	else if (s == 'p')
-		ft_putstr_fd("0x", 1);
+		i = ft_printf_p(va_arg(arg, long int), "0123456789abcdef", 16);
 	return (i);
 }
 

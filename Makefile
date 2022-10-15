@@ -12,8 +12,9 @@ RM	=		rm -f
 
 HEADER = 	ft_printf.h
 
-SRC	=		ft_printf.c ft_putnbr_base.c ft_print_s.c\
-ft_printf_d.c
+SRC	=		ft_printf.c ft_putnbr_base.c ft_printf_s.c\
+ft_printf_d.c ft_printf_h.c ft_printf_s.c ft_printf_p.c\
+ft_printf_u.c ft_printf_x.c ft_putnbr_base_x.c
 
 OBJ	=		$(SRC:.c=.o)
 
