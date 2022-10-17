@@ -2,6 +2,8 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
 
+[![wakatime](https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/dbfed7e7-16e9-4b96-ac50-8046cf85956b.svg)](https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/dbfed7e7-16e9-4b96-ac50-8046cf85956b)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -49,4 +51,4 @@ with all conversions
 ## Tasks
 
 - :ballot_box_with_check: Printf
-- :white_large_square: Bonus Part (ongoing)
+- :white_large_square: Bonus Part
