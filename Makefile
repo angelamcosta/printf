@@ -16,8 +16,9 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 			make -C $(LIBFT)
-			@ar -r $(NAME) $(OBJ)
-
+			cp -L $(LIBFT)/libft.a libftprintf.a
+			ar -rcs $(NAME) $(OBJ)
+			
 clean:
 			$(RM) $(OBJ)
 			make clean -C $(LIBFT)
