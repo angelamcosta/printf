@@ -6,9 +6,7 @@ RM		=	rm -f
 
 LIBFT	=	libft
 
-SRC		=	ft_printf_d.c ft_printf_h.c ft_printf_p.c\
-ft_printf_s.c ft_printf_u.c ft_printf_x.c ft_printf.c\
-ft_putnbr_base_x.c ft_putnbr_base.c
+SRC		=	ft_printf.c
 
 OBJ	=		$(SRC:.c=.o)
 
