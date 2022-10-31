@@ -13,16 +13,16 @@ OBJ	=		$(SRC:.c=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
-			make -C $(LIBFT)
-			cp -L $(LIBFT)/libft.a libftprintf.a
+			make -C $(LIBFT)/files
+			cp -L $(LIBFT)/files/libft.a libftprintf.a
 			ar -rcs $(NAME) $(OBJ)
 			
 clean:
 			$(RM) $(OBJ)
-			make clean -C $(LIBFT)
+			make clean -C $(LIBFT)/files
 
 fclean:		clean
 			$(RM) $(NAME)
-			make fclean -C $(LIBFT)
+			make fclean -C $(LIBFT)/files
 
 re:			fclean all
