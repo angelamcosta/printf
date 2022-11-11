@@ -8,6 +8,7 @@
 
   ![git clone](https://raw.githubusercontent.com/angelamcosta/printf/main/src/demo.gif)
 </div>
+
 ## Table of Contents
 
 - [Introduction](#introduction)
