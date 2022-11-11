@@ -1,11 +1,13 @@
-# Prinft
+# :printer: Prinft
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
+<div align=center>
 
-[![wakatime](https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/dbfed7e7-16e9-4b96-ac50-8046cf85956b.svg)](https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/dbfed7e7-16e9-4b96-ac50-8046cf85956b)
+  [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-![git clone](https://raw.githubusercontent.com/angelamcosta/printf/main/src/demo.gif)
+  <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/angelamcosta/printf" /> <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/angelamcosta/printf" /> <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/angelamcosta/printf" /> <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/angelamcosta/printf" /> <a href="https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/dbfed7e7-16e9-4b96-ac50-8046cf85956b"><img src="https://wakatime.com/badge/user/0c29d5b3-c30b-4e1a-ad07-2da3bd4f7e05/project/dbfed7e7-16e9-4b96-ac50-8046cf85956b.svg" alt="wakatime"></a>
 
+  ![git clone](https://raw.githubusercontent.com/angelamcosta/printf/main/src/demo.gif)
+</div>
 ## Table of Contents
 
 - [Introduction](#introduction)
