@@ -1,4 +1,4 @@
-# :printer: Prinft
+# :printer: Prinft [![anlima's 42 ft_printf Score](https://badge42.vercel.app/api/v2/cl9oe5ogt00110fm6h34z9iu9/project/2857118)](https://github.com/JaeSeoKim/badge42)
 
 <div align=center>
 
