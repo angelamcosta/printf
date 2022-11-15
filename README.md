@@ -19,7 +19,7 @@
 
 ## Introduction
 
-This aim of this project is to recode printf and learn how to use variadic arguments.
+The aim of this project is to recode printf and learn how to use variadic arguments.
 
 The subject of the project can be found in [this link](https://raw.githubusercontent.com/angelamcosta/printf/main/en.subject.pdf).
 
