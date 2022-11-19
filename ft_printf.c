@@ -6,7 +6,7 @@
 /*   By: anlima <anlima@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:38:52 by anlima            #+#    #+#             */
-/*   Updated: 2022/10/30 19:31:05 by anlima           ###   ########.fr       */
+/*   Updated: 2022/11/19 13:09:13 by anlima           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,12 @@ static int	ft_printf_p(unsigned long n, char *base, int i, int flag)
 
 	c = 0;
 	if (!n && flag == 0)
-	{
-		ft_putstr_fd("(nil)", 1);
-		return (5);
-	}
+		return (ft_printf_s("(nil)"));
 	if (flag == 0)
-	{
-		ft_putstr_fd("0x", 1);
-		c += 2;
-	}
+		c += ft_printf_s("0x");
 	if (n / i > 0)
 		c += ft_printf_p(n / i, base, i, ++flag);
-	ft_putchar_fd(base[n % i], 1);
+	write(1, &base[n % i], 1);
 	c++;
 	return (c);
 }
@@ -47,41 +41,48 @@ static int	ft_putnbr_base(long long int n, char *base, int i)
 	c = 0;
 	if (n < 0)
 	{
-		write(1, "-", 1);
+		c += ft_printf_s("-");
 		n = -n;
-		c++;
 	}
 	if (n / i > 0)
 		c += ft_putnbr_base(n / i, base, i);
-	ft_putchar_fd(base[n % i], 1);
+	write(1, &base[n % i], 1);
 	c++;
 	return (c);
 }
 
 static int	ft_printf_s(char *s)
 {
+	int	i;
+
 	if (!s)
+		return (ft_printf_s("(null)"));
+	i = 0;
+	while (s[i])
 	{
-		ft_putstr_fd("(null)", 1);
-		return (6);
+		write(1, &s[i], 1);
+		i++;
 	}
-	ft_putstr_fd(s, 1);
-	return (ft_strlen(s));
+	return (i);
 }
 
 static	int	ft_call_print(char s, va_list arg)
 {
 	int	i;
+	int	j;
 
 	i = 1;
 	if (s == 'c')
-		ft_putchar_fd(va_arg(arg, int), 1);
+	{
+		j = va_arg(arg, int);
+		write(1, &j, 1);
+	}
 	else if (s == 's')
 		i = ft_printf_s(va_arg(arg, char *));
 	else if (s == 'd' || s == 'i')
 		i = ft_putnbr_base(va_arg(arg, int), "0123456789", 10);
 	else if (s == '%')
-		ft_putchar_fd('%', 1);
+		write(1, "%%", 1);
 	else if (s == 'x')
 		i = ft_putnbr_base(va_arg(arg, unsigned int), "0123456789abcdef", 16);
 	else if (s == 'X')
@@ -97,22 +98,20 @@ int	ft_printf(const char *s, ...)
 {
 	va_list	arg;
 	int		chars;
+	int		i;
 
 	chars = 0;
+	i = -1;
 	va_start(arg, s);
-	while (*s)
+	while (s && s[++i])
 	{
-		if (*s != '%')
+		if (s[i] != '%')
 		{
 			chars++;
-			ft_putchar_fd(*s, 1);
+			write(1, &s[i], 1);
 		}
 		else
-		{
-			s++;
-			chars += ft_call_print(*s, arg);
-		}
-		s++;
+			chars += ft_call_print(s[++i], arg);
 	}
 	va_end(arg);
 	return (chars);
