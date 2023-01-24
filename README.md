@@ -23,6 +23,8 @@ The aim of this project is to recode printf and learn how to use variadic argume
 
 The subject of the project can be found in [this link](https://raw.githubusercontent.com/angelamcosta/printf/main/en.subject.pdf).
 
+You can also check out the [printf's wiki](https://github.com/angelamcosta/printf/wiki#printer-welcome-to-the-prinft-wiki) to help you understand what I did to solve this challenge.
+
 ## Mandatory part
 
 ### Printf
